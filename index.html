@@ -10,49 +10,49 @@
 	
     <title>Newsletter</title>
     <style>
-        body {
+		body {
 			font-family: "Inter", sans-serif;
 			background-color: RGB(32, 33, 37);
 			color: white;
-        }
+			margin: 0;
+			padding: 0;
+			box-sizing: border-box;
+		}
 		.tab {
 			overflow-x: auto;
 			display: flex;
 			gap: 15px;
-			padding: 20px 20px;
+			padding: 20px;
 		}
-        .tab button {
+		.tab button {
 			color: RGB(184, 184, 184);
 			font-family: "Inter", sans-serif;
 			font-weight: 562;
-			
-            background-color: inherit;
+			background-color: inherit;
 			border-radius: 10px;
-			
-            border: none;
-            outline: none;
-            cursor: pointer;
-            padding: 14px 16px;
-            transition: 0.3s;
-            font-size: 17px;
-			
+			border: none;
+			outline: none;
+			cursor: pointer;
+			padding: 14px 16px;
+			transition: 0.3s;
+			font-size: 17px;
 			height: 38px;
 			display: flex;
 			justify-content: center;
 			align-items: center;
-        }
-        .tab button:hover {
-            background-color: RGB(31, 73, 113);
-        }
-        .tab button.active {
+		}
+		.tab button:hover {
+			background-color: RGB(31, 73, 113);
+		}
+		.tab button.active {
 			color: RGB(197, 228, 255);
-            background-color: RGB(31, 73, 113);
-        }
-        .tabcontent {
-            display: none;
-            padding: 6px 12px;
-        }
-		
+			background-color: RGB(31, 73, 113);
+		}
+		.tabcontent {
+			display: none;
+			padding: 6px 12px;
+		}
+
 		.item {
 			display: grid;
 			flex-direction: column;
@@ -60,47 +60,56 @@
 			padding: 30px;
 			gap: 12px;
 		}
-		
-        <!-- .item:active { -->
-            <!-- transition: 0.3s; -->
-            <!-- background-color: RGB(31, 73, 113); -->
-		<!-- } -->
-		
+
 		.item:not(:last-child) {
 			border-bottom: 1px solid #2f2f2f;
 		}
-		
+
 		.item-cover {
 			display: block;
-			width:600px;
-			height:300px;
+			width: 100%; /* Use percentage-based width */
+			max-width: 600px; /* Set a max-width for larger screens */
+			height: auto; /* Allow height to adjust proportionally */
+			aspect-ratio: 2 / 1; /* Maintain aspect ratio (optional) */
 			object-fit: cover;
 			border-radius: 20px;
 		}
-		
+
 		.item-title {
 			font-size: 20px;
 			font-weight: 600;
-			width: 600px;
-			
+			width: 100%; /* Use percentage-based width */
+			max-width: 600px; /* Set a max-width for larger screens */
 			color: inherit;
-			
 			text-decoration: none;
 		}
-		
+
 		.item-logo {
 			display: block;
 			height: 30px;
 			width: fit-content;
 		}
-		
+
 		.item-category {
 			color: #219fef;
 			font-weight: bold;
 		}
-		
+
 		.item-date {
 			color: RGB(187, 187, 187);
+		}
+
+		/* Media Queries for Smaller Screens */
+		@media (max-width: 768px) {
+			.item {
+				padding: 20px; /* Reduce padding for smaller screens */
+			}
+			.item-cover {
+				max-width: 100%; /* Allow full width on smaller screens */
+			}
+			.item-title {
+				font-size: 18px; /* Adjust font size for smaller screens */
+			}
 		}
     </style>
 </head>
@@ -121,6 +130,13 @@
 
 <div id="Brasil" class="tabcontent">
 
+        <div class="item">
+            <img class="item-cover" src="https://cdn.brasil247.com/pb-b247gcp/swp/jtjeq9/media/20250222090252_94758396ac8ded990c733468094958c3d3d85fb287e41b271677a5ba6b67758c.png">
+            <img class="item-logo" src="https://www.brasil247.com/img/logo.svg">
+            <a class="item-title" data-tb-link="" href="https://www.brasil247.com//brasil/haddad-diz-que-fazenda-projeta-alta-de-2-5-do-pib-este-ano">Haddad diz que Fazenda projeta alta de 2,5% do PIB este ano</a>
+            <div class="item-date">07.03.2025 20h27</div>
+        </div>
+        
         <div class="item">
             <img class="item-cover" src="https://www.cartacapital.com.br/wp-content/uploads/2025/03/53802224866_9df78f0ea5_k.jpg">
             <img class="item-logo" src="https://www.editoraconfianca.com.br/include/novodigital/img/logocc600.png">
@@ -343,6 +359,13 @@
             <img class="item-logo" src="https://www.brasil247.com/img/logo.svg">
             <a class="item-title" data-tb-link="" href="https://www.brasil247.com//brasil/humberto-costa-assume-presidencia-temporaria-do-pt">Humberto Costa assume presidência temporária do PT</a>
             <div class="item-date">07.03.2025 12h34</div>
+        </div>
+        
+        <div class="item">
+            <img class="item-cover" src="https://www.cartacapital.com.br/wp-content/uploads/2019/02/Tragédia_Samarco_Mariana_acidente_mineradora_MG_11-min.jpg">
+            <img class="item-logo" src="https://www.editoraconfianca.com.br/include/novodigital/img/logocc600.png">
+            <a class="item-title" data-tb-link="" href="https://www.cartacapital.com.br/justica/desastre-em-mariana-26-municipios-aderem-a-acordo-de-reparacao/">Desastre em Mariana: 26 municípios aderem a acordo de reparação</a>
+            <div class="item-date">07.03.2025 12h24</div>
         </div>
         
         <div class="item">
@@ -773,13 +796,6 @@
         </div>
         
         <div class="item">
-            <img class="item-cover" src="https://cdn.brasil247.com/pb-b247gcp/swp/jtjeq9/media/20240808150812_62e6729b618a4d6128b487c68e29a69d0209c409a3dd411dfb7cc219efb352cb.webp">
-            <img class="item-logo" src="https://www.brasil247.com/img/logo.svg">
-            <a class="item-title" data-tb-link="" href="https://www.brasil247.com//brasil/pf-investiga-ataques-hackers-contra-stj-e-cnj">PF investiga ataques hackers contra STJ e CNJ</a>
-            <div class="item-date">06.03.2025 11h02</div>
-        </div>
-        
-        <div class="item">
             <img class="item-cover" src="https://www.cartacapital.com.br/wp-content/uploads/2025/03/cajamar.jpg">
             <img class="item-logo" src="https://www.editoraconfianca.com.br/include/novodigital/img/logocc600.png">
             <a class="item-title" data-tb-link="" href="https://www.cartacapital.com.br/sociedade/justica-decreta-prisao-de-ex-namorado-da-adolescente-encontrada-morta-em-cajamar-sp/">Ex-namorado da adolescente encontrada morta em Cajamar (SP) se entrega à polícia</a>
@@ -1064,13 +1080,6 @@
             <img class="item-logo" src="https://www.editoraconfianca.com.br/include/novodigital/img/logocc600.png">
             <a class="item-title" data-tb-link="" href="https://www.cartacapital.com.br/cartaexpressa/caminhao-tanque-tomba-e-interdita-a-via-dutra-no-rio/">Caminhão-tanque tomba e interdita a Via Dutra no Rio</a>
             <div class="item-date">03.03.2025 14h35</div>
-        </div>
-        
-        <div class="item">
-            <img class="item-cover" src="https://www.cartacapital.com.br/wp-content/uploads/2019/07/eduardo-bolsonaro.png">
-            <img class="item-logo" src="https://www.editoraconfianca.com.br/include/novodigital/img/logocc600.png">
-            <a class="item-title" data-tb-link="" href="https://www.cartacapital.com.br/cartaexpressa/bolsonaro-reclama-de-possivel-apreensao-do-passaporte-de-eduardo-constrangimento/">Bolsonaro reclama de possível apreensão do passaporte de Eduardo: 'Constrangimento'</a>
-            <div class="item-date">03.03.2025 13h21</div>
         </div>
         
         <div class="item">
@@ -2155,6 +2164,13 @@
 <div id="Mundo" class="tabcontent">
 
         <div class="item">
+            <img class="item-cover" src="https://cdn.brasil247.com/pb-b247gcp/swp/jtjeq9/media/20220302050316_09b5ead1a7368ff05c6ed4495f05850b11223457edfe53365fb464a8564d1225.png">
+            <img class="item-logo" src="https://www.brasil247.com/img/logo.svg">
+            <a class="item-title" data-tb-link="" href="https://www.brasil247.com//mundo/tarifas-sobre-uranio-canadense-ameacam-setor-nuclear-dos-eua-e-expansao-da-inteligencia-artificial">Tarifas sobre urânio canadense ameaçam setor nuclear dos EUA e expansão da inteligência artificial</a>
+            <div class="item-date">07.03.2025 20h26</div>
+        </div>
+        
+        <div class="item">
             <img class="item-cover" src="https://cdn.brasil247.com/pb-b247gcp/swp/jtjeq9/media/20250227120236_f95f0d431b13f9e03eee58e255a9ad35da2e59cd25af4f35f9fb0b6b154fd9c1.jpg">
             <img class="item-logo" src="https://www.brasil247.com/img/logo.svg">
             <a class="item-title" data-tb-link="" href="https://www.brasil247.com//mundo/gene-hackman-e-esposa-morreram-devido-a-doencas-com-dias-de-diferenca-diz-autopsia">Gene Hackman e esposa morreram devido a doenças com dias de diferença, diz autópsia</a>
@@ -2341,6 +2357,13 @@
             <img class="item-logo" src="https://www.brasil247.com/img/logo.svg">
             <a class="item-title" data-tb-link="" href="https://www.brasil247.com//mundo/bomba-da-segunda-guerra-mundial-paralisa-estacao-de-trem-em-paris-a-3-mais-movimentada-do-mundo">Bomba da Segunda Guerra Mundial paralisa estação de trem em Paris, a 3ª mais movimentada do mundo</a>
             <div class="item-date">07.03.2025 07h59</div>
+        </div>
+        
+        <div class="item">
+            <img class="item-cover" src="https://www.cartacapital.com.br/wp-content/uploads/2025/03/000_36ZF2Z3.jpg">
+            <img class="item-logo" src="https://www.editoraconfianca.com.br/include/novodigital/img/logocc600.png">
+            <a class="item-title" data-tb-link="" href="https://www.cartacapital.com.br/mundo/descoberta-de-bomba-da-ii-guerra-mundial-paralisa-maior-estacao-de-trens-de-paris/">Trens voltam a circular na maior estação de Paris após descoberta de bomba da 2ª Guerra</a>
+            <div class="item-date">07.03.2025 07h01</div>
         </div>
         
         <div class="item">
@@ -2743,13 +2766,6 @@
         </div>
         
         <div class="item">
-            <img class="item-cover" src="https://cdn.brasil247.com/pb-b247gcp/swp/jtjeq9/media/20220531170544_26be6bad60d6814ebb661572b55d34e60158ce743906d282aaeeb98fe2c6047a.jpg">
-            <img class="item-logo" src="https://www.brasil247.com/img/logo.svg">
-            <a class="item-title" data-tb-link="" href="https://www.brasil247.com//mundo/lideres-da-ue-apoiam-aumento-de-gastos-militares-e-apoiam-zelensky-apos-congelamento-da-ajuda-dos-eua">Líderes da UE apoiam aumento de gastos militares e apoiam Zelensky após congelamento da ajuda dos EUA</a>
-            <div class="item-date">06.03.2025 04h53</div>
-        </div>
-        
-        <div class="item">
             <img class="item-cover" src="https://www.cartacapital.com.br/wp-content/uploads/2025/02/000_36XK27E.jpg">
             <img class="item-logo" src="https://www.editoraconfianca.com.br/include/novodigital/img/logocc600.png">
             <a class="item-title" data-tb-link="" href="https://www.cartacapital.com.br/mundo/estarao-mortos-se-retiverem-refens-trump-ameaca-a-populacao-de-gaza/">'Estarão mortos se retiverem reféns': Trump ameaça a população de Gaza</a>
@@ -2775,13 +2791,6 @@
             <img class="item-logo" src="https://www.editoraconfianca.com.br/include/novodigital/img/logocc600.png">
             <a class="item-title" data-tb-link="" href="https://www.cartacapital.com.br/mundo/apagao-deixa-mais-de-500-mil-sem-luz-em-buenos-aires/">Apagão deixa mais de 500 mil sem luz em Buenos Aires</a>
             <div class="item-date">05.03.2025 18h04</div>
-        </div>
-        
-        <div class="item">
-            <img class="item-cover" src="https://www.cartacapital.com.br/wp-content/uploads/2025/02/000_36YP3CK.jpg">
-            <img class="item-logo" src="https://www.editoraconfianca.com.br/include/novodigital/img/logocc600.png">
-            <a class="item-title" data-tb-link="" href="https://www.cartacapital.com.br/mundo/eua-isentam-por-um-mes-tarifas-de-importacao-para-automoveis-de-canada-e-mexico/">EUA isentam por um mês tarifas de importação para automóveis de Canadá e México</a>
-            <div class="item-date">05.03.2025 17h54</div>
         </div>
         </div>
 
