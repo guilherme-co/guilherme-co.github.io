@@ -1,1 +1,175 @@
-hello world
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Inter:ital,wght@0,562;1,562&display=swap" rel="stylesheet">
+	
+    <title>Tabbed Content</title>
+    <style>
+        body {
+			font-family: "Inter", sans-serif;
+			background-color: RGB(32, 33, 37);
+			color: white;
+        }
+        .tab {
+			overflow: hidden;
+			
+			justify-content: center;
+			display: flex;
+			
+            padding: 20px 0px;
+			
+			gap: 15px;
+        }
+        .tab button {
+			color: RGB(184, 184, 184);
+			font-family: "Inter", sans-serif;
+			font-weight: 562;
+			
+            background-color: inherit;
+			border-radius: 10px;
+			
+            border: none;
+            outline: none;
+            cursor: pointer;
+            padding: 14px 16px;
+            transition: 0.3s;
+            font-size: 17px;
+			
+			height: 38px;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+        }
+        .tab button:hover {
+            background-color: RGB(31, 73, 113);
+        }
+        .tab button.active {
+			color: RGB(197, 228, 255);
+            background-color: RGB(31, 73, 113);
+        }
+        .tabcontent {
+            display: none;
+            padding: 6px 12px;
+        }
+		
+		.item {
+			display: grid;
+			flex-direction: column;
+			justify-content: center;
+			padding: 20px;
+			gap: 12px;
+			
+			color: inherit;
+			
+			text-decoration: none;
+		}
+		
+        <!-- .item:active { -->
+            <!-- transition: 0.3s; -->
+            <!-- background-color: RGB(31, 73, 113); -->
+		<!-- } -->
+		
+		.item:not(:last-child) {
+			border-bottom: 1px solid #515152;
+		}
+		
+		.item-cover {
+			display: block;
+			width:600px;
+			height:300px;
+			object-fit: cover;
+			border-radius: 20px;
+		}
+		
+		.item-title {
+			font-size: 20px;
+			font-weight: 600;
+			width: 600px;
+		}
+		
+		.item-logo {
+			display: block;
+			height: 30px;
+			width: fit-content;
+		}
+		
+		.item-category {
+			color: #219fef;
+			font-weight: bold;
+		}
+		
+		.item-date {
+			color: RGB(187, 187, 187);
+		}
+    </style>
+</head>
+<body>
+
+<div class="tab">
+    <button class="tablinks" onclick="openTab(event, 'Notícias')">Notícias</button>
+    <button class="tablinks" onclick="openTab(event, 'Concursos')">Concursos</button>
+    <button class="tablinks" onclick="openTab(event, 'NewLaws')">Eventos</button>
+</div>
+
+<div id="Notícias" class="tabcontent">
+	<a class="item" data-tb-link="" href="https://www.brasil247.com/economia/justica-federal-poe-fim-a-ofensiva-de-carlos-suarez-contra-venda-de-termicas-da-eletrobras-para-ambar-y5pdufhe">
+		<img class="item-cover" src="https://cdn.brasil247.com/pb-b247gcp/swp/jtjeq9/media/20250307150336_4ebfed0d-25e0-4a9c-b356-e2619cd8ae4b.webp">
+		<img class="item-logo" src="https://www.brasil247.com/img/logo.svg">
+		<div class="item-category">ECONOMIA</div>
+		<div class="item-title">Em mensagem ao Brasil, Papa Francisco destaca urgência climática e expressa esperança na COP30</div>
+		<div class="item-date">Há 19 horas</div>
+	</a>
+	<a class="item" data-tb-link="" href="https://www.brasil247.com/economia/justica-federal-poe-fim-a-ofensiva-de-carlos-suarez-contra-venda-de-termicas-da-eletrobras-para-ambar-y5pdufhe">
+		<img class="item-cover" src="https://cdn.brasil247.com/pb-b247gcp/swp/jtjeq9/media/20250307150336_4ebfed0d-25e0-4a9c-b356-e2619cd8ae4b.webp">
+		<img class="item-logo" src="https://www.brasil247.com/img/logo.svg">
+		<div class="item-category">ECONOMIA</div>
+		<div class="item-title">Em mensagem ao Brasil, Papa Francisco destaca urgência climática e expressa esperança na COP30</div>
+		<div class="item-date">Há 19 horas</div>
+	</a>
+</div>
+
+<div id="Concursos" class="tabcontent">
+    <h3>Concursos</h3>
+    <ul>
+        <li>Event 1</li>
+        <li>Event 2</li>
+        <li>Event 3</li>
+    </ul>
+</div>
+
+<div id="NewLaws" class="tabcontent">
+    <h3>Eventos</h3>
+    <ul>
+        <li>Law 1</li>
+        <li>Law 2</li>
+        <li>Law 3</li>
+    </ul>
+</div>
+
+<script>
+    function openTab(evt, tabName) {
+        var i, tabcontent, tablinks;
+        tabcontent = document.getElementsByClassName("tabcontent");
+        for (i = 0; i < tabcontent.length; i++) {
+            tabcontent[i].style.display = "none";
+        }
+        tablinks = document.getElementsByClassName("tablinks");
+        for (i = 0; i < tablinks.length; i++) {
+            tablinks[i].className = tablinks[i].className.replace(" active", "");
+        }
+        document.getElementById(tabName).style.display = "block";
+        evt.currentTarget.className += " active";
+    }
+
+    // Open the default tab on page load
+    document.getElementById("Notícias").style.display = "block";
+    document.getElementsByClassName("tablinks")[0].className += " active";
+</script>
+
+</body>
+</html>
