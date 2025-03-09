@@ -1,1 +1,1 @@
-git add . && git commit -m "msg" && git push origin main
+git add "H:\guilherme-co.github.io\index.html" && git commit -m "msg" && git push origin main
