@@ -1,8 +1,9 @@
 <!DOCTYPE html>
-<html lang="pt-br"><head>
+<html lang="pt-br">
+<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cronograma da faculdade</title>
+    <title>Cronograma da Faculdade</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -15,38 +16,36 @@
             text-align: center;
             margin-bottom: 20px;
         }
-		table {
-			/* width: 50%; */
-			border-collapse: collapse;
-			margin-bottom: 80px;
-			overflow-x: auto;
-			margin-left: auto;
-			margin-right: auto;
-		}
-		th, td {
-			border: 1px solid #00000057;
-			padding: 10px;
-			text-align: left;
-			font-size: 0.9em;
-		}
-		th {
-			background-color: #aaa;
-			text-align: center;
-			color: black;
-			font-size: 1.2em;
-		}
-		td:first-child {
-			text-align: center;
-		}
-		
-		.day-header {
-			font-size: 1.5em;
-			font-weight: bold;
-			margin-top: 40px;
-			margin-bottom: 10px;
-			color: #000;
-			text-align: center;
-		}
+        table {
+            border-collapse: collapse;
+            margin-bottom: 80px;
+            overflow-x: auto;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        th, td {
+            border: 1px solid #00000057;
+            padding: 10px;
+            text-align: left;
+            font-size: 0.9em;
+        }
+        th {
+            background-color: #aaa;
+            text-align: center;
+            color: black;
+            font-size: 1.2em;
+        }
+        td:first-child {
+            text-align: center;
+        }
+        .day-header {
+            font-size: 1.5em;
+            font-weight: bold;
+            margin-top: 40px;
+            margin-bottom: 10px;
+            color: #000;
+            text-align: center;
+        }
         .time-divider {
             font-weight: bold;
             background-color: #e0e0e0;
@@ -54,19 +53,14 @@
             margin-top: 10px;
             font-size: 1.1em;
         }
-		.past-event {
-			background-color: #c6c6c6;
-			color: black;
-		}
+        .past-event {
+            background-color: #c6c6c6;
+            color: black;
+        }
         .next-event {
             background-color: green;
             color: white;
         }
-		
-		.class_schedule {
-		}
-
-        /* Mobile-specific styles */
         @media (max-width: 600px) {
             h1 {
                 font-size: 1.5em;
@@ -87,135 +81,58 @@
     </style>
 </head>
 <body>
-    <h1>Medicina (Graduação)</h1>
-    <div id="schedule" class="class_schedule"><div class="day-header">SEGUNDA-FEIRA</div><table><thead><tr><th>Hora</th><th>Disciplina</th><th>Local</th></tr></thead><tbody><tr class="past-event"><td>08:00 - 08:50</td><td>09020017 - M1 - FISIOLOGIA I</td><td>Não informado</td></tr><tr class="past-event"><td>08:50 - 09:40</td><td>09020017 - M1 - FISIOLOGIA I</td><td>Não informado</td></tr><tr class="past-event"><td>10:00 - 10:50</td><td>09020017 - M1 - FISIOLOGIA I</td><td>Não informado</td></tr><tr class="past-event"><td>10:50 - 11:40</td><td>09020017 - M1 - FISIOLOGIA I</td><td>Não informado</td></tr><tr class="past-event"><td>13:30 - 14:20</td><td>09040021 - M1 - ANATOMIA HUMANA I</td><td>Não informado</td></tr><tr class="past-event"><td>14:20 - 15:10</td><td>09040021 - M1 - ANATOMIA HUMANA I</td><td>Não informado</td></tr><tr class="past-event"><td>15:10 - 16:00</td><td>09040021 - M1 - ANATOMIA HUMANA I</td><td>Não informado</td></tr><tr class="past-event"><td>16:00 - 16:50</td><td>07410002 - M1 - PSICOLOGIA MÉDICA I</td><td>Não informado</td></tr><tr class="next-event"><td>17:10 - 18:00</td><td>07410002 - M1 - PSICOLOGIA MÉDICA I</td><td>Não informado</td></tr></tbody></table><div class="day-header">TERÇA-FEIRA</div><table><thead><tr><th>Hora</th><th>Disciplina</th><th>Local</th></tr></thead><tbody><tr><td>08:00 - 08:50</td><td>12000040 - M1 - BIOQUÍMICA I</td><td>Não informado</td></tr><tr><td>08:50 - 09:40</td><td>12000040 - M1 - BIOQUÍMICA I</td><td>Não informado</td></tr><tr><td>13:30 - 14:20</td><td>09040021 - M1 - ANATOMIA HUMANA I</td><td>Não informado</td></tr><tr><td>14:20 - 15:10</td><td>09020017 - M1 - FISIOLOGIA I</td><td>Não informado</td></tr><tr><td>15:10 - 16:00</td><td>09020017 - M1 - FISIOLOGIA I</td><td>Não informado</td></tr></tbody></table><div class="day-header">QUARTA-FEIRA</div><table><thead><tr><th>Hora</th><th>Disciplina</th><th>Local</th></tr></thead><tbody><tr><td>08:00 - 08:50</td><td>09040022 - M1 - HISTOLOGIA I</td><td>Não informado</td></tr><tr><td>08:50 - 09:40</td><td>09040022 - M1 - HISTOLOGIA I</td><td>Não informado</td></tr><tr><td>10:00 - 10:50</td><td>09040022 - M1 - HISTOLOGIA I</td><td>Não informado</td></tr><tr><td>10:50 - 11:40</td><td>09040022 - M1 - HISTOLOGIA I</td><td>Não informado</td></tr><tr><td>17:10 - 18:00</td><td>07410002 - M1 - PSICOLOGIA MÉDICA I</td><td>Não informado</td></tr></tbody></table><div class="day-header">QUINTA-FEIRA</div><table><thead><tr><th>Hora</th><th>Disciplina</th><th>Local</th></tr></thead><tbody><tr><td>08:00 - 08:50</td><td>07450006 - M1 - INTRODUÇÃO À MEDICINA</td><td>Não informado</td></tr><tr><td>08:50 - 09:40</td><td>07450006 - M1 - INTRODUÇÃO À MEDICINA</td><td>Não informado</td></tr><tr><td>10:00 - 10:50</td><td>07450006 - M1 - INTRODUÇÃO À MEDICINA</td><td>Não informado</td></tr><tr><td>10:50 - 11:40</td><td>07450006 - M1 - INTRODUÇÃO À MEDICINA</td><td>Não informado</td></tr><tr><td>13:30 - 14:20</td><td>09040021 - M1 - ANATOMIA HUMANA I</td><td>Não informado</td></tr><tr><td>14:20 - 15:10</td><td>09040021 - M1 - ANATOMIA HUMANA I</td><td>Não informado</td></tr><tr><td>15:10 - 16:00</td><td>09040021 - M1 - ANATOMIA HUMANA I</td><td>Não informado</td></tr></tbody></table><div class="day-header">SEXTA-FEIRA</div><table><thead><tr><th>Hora</th><th>Disciplina</th><th>Local</th></tr></thead><tbody><tr><td>08:00 - 08:50</td><td>12000040 - M1 - BIOQUÍMICA I</td><td>Não informado</td></tr><tr><td>08:50 - 09:40</td><td>12000040 - M1 - BIOQUÍMICA I</td><td>Não informado</td></tr><tr><td>10:00 - 10:50</td><td>12000040 - M1 - BIOQUÍMICA I</td><td>Não informado</td></tr><tr><td>10:50 - 11:40</td><td>07450006 - M1 - INTRODUÇÃO À MEDICINA</td><td>Não informado</td></tr></tbody></table></div>
+    <h1>MEDICINA (GRADUAÇÃO)</h1>
+    <div id="schedule" class="class_schedule"></div>
 
-    <script>
-        const rows = [{'disciplina': '09020017 - M1 - FISIOLOGIA I', 'nome': '2-SEGUNDA-FEIRA', 'horario': '08:00 - 08:50', 'cod_horario': '211', 'cod_atividade': '09020017', 'local': 'Não informado'}, {'disciplina': '09020017 - M1 - FISIOLOGIA I', 'nome': '2-SEGUNDA-FEIRA', 'horario': '08:50 - 09:40', 'cod_horario': '212', 'cod_atividade': '09020017', 'local': 'Não informado'}, {'disciplina': '09020017 - M1 - FISIOLOGIA I', 'nome': '2-SEGUNDA-FEIRA', 'horario': '10:00 - 10:50', 'cod_horario': '213', 'cod_atividade': '09020017', 'local': 'Não informado'}, {'disciplina': '09020017 - M1 - FISIOLOGIA I', 'nome': '2-SEGUNDA-FEIRA', 'horario': '10:50 - 11:40', 'cod_horario': '214', 'cod_atividade': '09020017', 'local': 'Não informado'}, {'disciplina': '09040021 - M1 - ANATOMIA HUMANA I', 'nome': '2-SEGUNDA-FEIRA', 'horario': '13:30 - 14:20', 'cod_horario': '221', 'cod_atividade': '09040021', 'local': 'Não informado'}, {'disciplina': '09040021 - M1 - ANATOMIA HUMANA I', 'nome': '2-SEGUNDA-FEIRA', 'horario': '14:20 - 15:10', 'cod_horario': '222', 'cod_atividade': '09040021', 'local': 'Não informado'}, {'disciplina': '09040021 - M1 - ANATOMIA HUMANA I', 'nome': '2-SEGUNDA-FEIRA', 'horario': '15:10 - 16:00', 'cod_horario': '223', 'cod_atividade': '09040021', 'local': 'Não informado'}, {'disciplina': '07410002 - M1 - PSICOLOGIA MÉDICA I', 'nome': '2-SEGUNDA-FEIRA', 'horario': '16:00 - 16:50', 'cod_horario': '224', 'cod_atividade': '07410002', 'local': 'Não informado'}, {'disciplina': '07410002 - M1 - PSICOLOGIA MÉDICA I', 'nome': '2-SEGUNDA-FEIRA', 'horario': '17:10 - 18:00', 'cod_horario': '225', 'cod_atividade': '07410002', 'local': 'Não informado'}, {'disciplina': '12000040 - M1 - BIOQUÍMICA I', 'nome': '3-TERÇA-FEIRA', 'horario': '08:00 - 08:50', 'cod_horario': '311', 'cod_atividade': '12000040', 'local': 'Não informado'}, {'disciplina': '12000040 - M1 - BIOQUÍMICA I', 'nome': '3-TERÇA-FEIRA', 'horario': '08:50 - 09:40', 'cod_horario': '312', 'cod_atividade': '12000040', 'local': 'Não informado'}, {'disciplina': '09040021 - M1 - ANATOMIA HUMANA I', 'nome': '3-TERÇA-FEIRA', 'horario': '13:30 - 14:20', 'cod_horario': '321', 'cod_atividade': '09040021', 'local': 'Não informado'}, {'disciplina': '09020017 - M1 - FISIOLOGIA I', 'nome': '3-TERÇA-FEIRA', 'horario': '14:20 - 15:10', 'cod_horario': '322', 'cod_atividade': '09020017', 'local': 'Não informado'}, {'disciplina': '09020017 - M1 - FISIOLOGIA I', 'nome': '3-TERÇA-FEIRA', 'horario': '15:10 - 16:00', 'cod_horario': '323', 'cod_atividade': '09020017', 'local': 'Não informado'}, {'disciplina': '09040022 - M1 - HISTOLOGIA I', 'nome': '4-QUARTA-FEIRA', 'horario': '08:00 - 08:50', 'cod_horario': '411', 'cod_atividade': '09040022', 'local': 'Não informado'}, {'disciplina': '09040022 - M1 - HISTOLOGIA I', 'nome': '4-QUARTA-FEIRA', 'horario': '08:50 - 09:40', 'cod_horario': '412', 'cod_atividade': '09040022', 'local': 'Não informado'}, {'disciplina': '09040022 - M1 - HISTOLOGIA I', 'nome': '4-QUARTA-FEIRA', 'horario': '10:00 - 10:50', 'cod_horario': '413', 'cod_atividade': '09040022', 'local': 'Não informado'}, {'disciplina': '09040022 - M1 - HISTOLOGIA I', 'nome': '4-QUARTA-FEIRA', 'horario': '10:50 - 11:40', 'cod_horario': '414', 'cod_atividade': '09040022', 'local': 'Não informado'}, {'disciplina': '07410002 - M1 - PSICOLOGIA MÉDICA I', 'nome': '4-QUARTA-FEIRA', 'horario': '17:10 - 18:00', 'cod_horario': '425', 'cod_atividade': '07410002', 'local': 'Não informado'}, {'disciplina': '07450006 - M1 - INTRODUÇÃO À MEDICINA', 'nome': '5-QUINTA-FEIRA', 'horario': '08:00 - 08:50', 'cod_horario': '511', 'cod_atividade': '07450006', 'local': 'Não informado'}, {'disciplina': '07450006 - M1 - INTRODUÇÃO À MEDICINA', 'nome': '5-QUINTA-FEIRA', 'horario': '08:50 - 09:40', 'cod_horario': '512', 'cod_atividade': '07450006', 'local': 'Não informado'}, {'disciplina': '07450006 - M1 - INTRODUÇÃO À MEDICINA', 'nome': '5-QUINTA-FEIRA', 'horario': '10:00 - 10:50', 'cod_horario': '513', 'cod_atividade': '07450006', 'local': 'Não informado'}, {'disciplina': '07450006 - M1 - INTRODUÇÃO À MEDICINA', 'nome': '5-QUINTA-FEIRA', 'horario': '10:50 - 11:40', 'cod_horario': '514', 'cod_atividade': '07450006', 'local': 'Não informado'}, {'disciplina': '09040021 - M1 - ANATOMIA HUMANA I', 'nome': '5-QUINTA-FEIRA', 'horario': '13:30 - 14:20', 'cod_horario': '521', 'cod_atividade': '09040021', 'local': 'Não informado'}, {'disciplina': '09040021 - M1 - ANATOMIA HUMANA I', 'nome': '5-QUINTA-FEIRA', 'horario': '14:20 - 15:10', 'cod_horario': '522', 'cod_atividade': '09040021', 'local': 'Não informado'}, {'disciplina': '09040021 - M1 - ANATOMIA HUMANA I', 'nome': '5-QUINTA-FEIRA', 'horario': '15:10 - 16:00', 'cod_horario': '523', 'cod_atividade': '09040021', 'local': 'Não informado'}, {'disciplina': '12000040 - M1 - BIOQUÍMICA I', 'nome': '6-SEXTA-FEIRA', 'horario': '08:00 - 08:50', 'cod_horario': '611', 'cod_atividade': '12000040', 'local': 'Não informado'}, {'disciplina': '12000040 - M1 - BIOQUÍMICA I', 'nome': '6-SEXTA-FEIRA', 'horario': '08:50 - 09:40', 'cod_horario': '612', 'cod_atividade': '12000040', 'local': 'Não informado'}, {'disciplina': '12000040 - M1 - BIOQUÍMICA I', 'nome': '6-SEXTA-FEIRA', 'horario': '10:00 - 10:50', 'cod_horario': '613', 'cod_atividade': '12000040', 'local': 'Não informado'}, {'disciplina': '07450006 - M1 - INTRODUÇÃO À MEDICINA', 'nome': '6-SEXTA-FEIRA', 'horario': '10:50 - 11:40', 'cod_horario': '614', 'cod_atividade': '07450006', 'local': 'Não informado'}];
-		
-		const days = ["SEGUNDA-FEIRA", "TERÇA-FEIRA", "QUARTA-FEIRA", "QUINTA-FEIRA", "SEXTA-FEIRA"];
+	<script>
+		document.addEventListener("DOMContentLoaded", function() {
+			const daysOfWeek = ["DOMINGO", "SEGUNDA", "TERÇA", "QUARTA", "QUINTA", "SEXTA", "SÁBADO"];
+			const now = new Date();
+			const currentDay = daysOfWeek[now.getDay()]; // Get the current day name
+			const currentTime = now.getHours() * 60 + now.getMinutes(); // Convert current time to minutes
+			
+			const scheduleDiv = document.getElementById("schedule");
+			const dayHeaders = scheduleDiv.getElementsByClassName("day-header");
 
-		const scheduleDiv = document.getElementById('schedule');
+			let foundCurrentDay = false;
+			let nextEventFound = false;
 
-		// Get current Unix timestamp
-		const now = new Date();
-		const currentDayIndex = now.getDay() - 1; // Adjust for JavaScript's getDay() (0 = Sunday)
-		const currentTime = now.getHours() * 60 + now.getMinutes(); // Convert to minutes
+			for (let i = 0; i < dayHeaders.length; i++) {
+				const dayHeader = dayHeaders[i];
+				const dayName = dayHeader.textContent.split("-")[1].trim(); // Extract the day name
+				
+				if (dayName === currentDay) {
+					foundCurrentDay = true;
+					const table = dayHeader.nextElementSibling;
+					const rows = table.getElementsByTagName("tbody")[0].getElementsByTagName("tr");
 
-		// Function to convert time string to minutes
-		const timeToMinutes = (time) => {
-			const [hours, minutes] = time.split(':').map(Number);
-			return hours * 60 + minutes;
-		};
+					for (let j = 0; j < rows.length; j++) {
+						const row = rows[j];
+						const timeCell = row.getElementsByTagName("td")[0];
+						const timeRange = timeCell.textContent.trim().split(" - ");
+						const startTime = convertTimeToMinutes(timeRange[0]);
+						const endTime = convertTimeToMinutes(timeRange[1]);
 
-		// Function to determine if an event is past, current, or future
-		const getEventStatus = (startTime, endTime) => {
-			const start = timeToMinutes(startTime);
-			const end = timeToMinutes(endTime);
-			if (currentTime > end) return "past";
-			if (currentTime >= start && currentTime <= end) return "current";
-			return "future";
-		};
-
-		// Group rows by day
-		const groupedRows = rows.reduce((acc, row) => {
-			const day = row.nome.split('-')[1]; // Extract the day from the nome field
-			if (!acc[day]) {
-				acc[day] = [];
-			}
-			acc[day].push(row);
-			return acc;
-		}, {});
-
-		days.forEach(day => {
-			const filteredRows = groupedRows[day] || [];
-
-			if (filteredRows.length > 0) {
-				// Add day header
-				const dayHeader = document.createElement('div');
-				dayHeader.className = 'day-header';
-				dayHeader.textContent = day;
-				scheduleDiv.appendChild(dayHeader);
-
-				// Create table
-				const table = document.createElement('table');
-				const thead = document.createElement('thead');
-				const tbody = document.createElement('tbody');
-
-				// Add table headers
-				const headerRow = document.createElement('tr');
-				const headers = ["Hora", "Disciplina", "Local"];
-				headers.forEach(headerText => {
-					const th = document.createElement('th');
-					th.textContent = headerText;
-					headerRow.appendChild(th);
-				});
-				thead.appendChild(headerRow);
-				table.appendChild(thead);
-
-				// Track if the next event has been highlighted
-				let nextEventHighlighted = false;
-
-				// Define time intervals for Manhã, Tarde, Noite
-				const timeIntervals = [
-					{ name: "Manhã", start: 480, end: 720 }, // 8h - 12h
-					{ name: "Tarde", start: 720, end: 1080 }, // 12h - 18h
-					{ name: "Noite", start: 1080, end: 1260 } // 18h - 21h
-				];
-
-				let lastInterval = null;
-
-				filteredRows.forEach(row => {
-					const [startTime, endTime] = row.horario.split(' - ');
-					const startMinutes = timeToMinutes(startTime);
-					const endMinutes = timeToMinutes(endTime);
-
-					// Determine the current interval
-					const currentInterval = timeIntervals.find(interval => startMinutes >= interval.start && startMinutes < interval.end);
-
-					// Add a divider row if the interval changes
-					if (currentInterval && currentInterval !== lastInterval) {
-						const dividerRow = document.createElement('tr');
-						const dividerCell = document.createElement('td');
-						dividerCell.setAttribute('colspan', '3');
-						dividerCell.className = 'time-divider';
-						dividerCell.textContent = currentInterval.name;
-						dividerRow.appendChild(dividerCell);
-						tbody.appendChild(dividerRow);
-						lastInterval = currentInterval;
-					}
-
-					const eventStatus = getEventStatus(startTime, endTime);
-
-					const tr = document.createElement('tr');
-					if (days.indexOf(day) === currentDayIndex) {
-						if (eventStatus === "past") {
-							tr.classList.add('past-event');
-						} else if (eventStatus === "current" || (eventStatus === "future" && !nextEventHighlighted)) {
-							tr.classList.add('next-event');
-							nextEventHighlighted = true;
+						if (currentTime > endTime) {
+							row.classList.add("past-event"); // Mark past events
+						} else if (currentTime >= startTime && currentTime <= endTime) {
+							row.classList.add("next-event"); // Mark current event
+							nextEventFound = true;
+						} else if (!nextEventFound) {
+							row.classList.add("next-event"); // Mark the next upcoming event
+							nextEventFound = true;
 						}
 					}
-
-					const tdHour = document.createElement('td');
-					tdHour.textContent = row.horario;
-					tr.appendChild(tdHour);
-
-					const tdDiscipline = document.createElement('td');
-					tdDiscipline.textContent = row.disciplina;
-					tr.appendChild(tdDiscipline);
-
-					const tdLocal = document.createElement('td');
-					tdLocal.textContent = row.local;
-					tr.appendChild(tdLocal);
-
-					tbody.appendChild(tr);
-				});
-
-				table.appendChild(tbody);
-				scheduleDiv.appendChild(table);
+				} else if (foundCurrentDay) {
+					break; // Stop after processing the current day
+				}
 			}
 		});
-    </script>
 
-</body></html>
+		function convertTimeToMinutes(time) {
+			const [hours, minutes] = time.split(":").map(Number);
+			return hours * 60 + minutes;
+		}
+	</script>
+</body>
+</html>
