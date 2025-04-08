@@ -84,5 +84,56 @@
 <body>
     <h1>MEDICINA (GRADUAÇÃO)</h1>
     <div id="schedule" class="class_schedule"><div class="day-header">2-SEGUNDA-FEIRA</div><table><thead><tr><th>Hora</th><th>Disciplina</th><th>Local</th></tr></thead><tbody><tr class="time-section"><td colspan="100%">Manhã</td></tr><tr><td>08:00 - 08:50</td><td>09020017 - M1 - FISIOLOGIA I</td><td>Não informado</td></tr><tr><td>08:50 - 09:40</td><td>09020017 - M1 - FISIOLOGIA I</td><td>Não informado</td></tr><tr><td>10:00 - 10:50</td><td>09020017 - M1 - FISIOLOGIA I</td><td>Não informado</td></tr><tr><td>10:50 - 11:40</td><td>09020017 - M1 - FISIOLOGIA I</td><td>Não informado</td></tr><tr class="time-section"><td colspan="100%">Tarde</td></tr><tr><td>13:30 - 14:20</td><td>09040021 - M1 - ANATOMIA HUMANA I</td><td>Não informado</td></tr><tr><td>14:20 - 15:10</td><td>09040021 - M1 - ANATOMIA HUMANA I</td><td>Não informado</td></tr><tr><td>15:10 - 16:00</td><td>09040021 - M1 - ANATOMIA HUMANA I</td><td>Não informado</td></tr><tr><td>16:00 - 16:50</td><td>07410002 - M1 - PSICOLOGIA MÉDICA I</td><td>Não informado</td></tr><tr><td>17:10 - 18:00</td><td>07410002 - M1 - PSICOLOGIA MÉDICA I</td><td>Não informado</td></tr></tbody></table><div class="day-header">3-TERÇA-FEIRA</div><table><thead><tr><th>Hora</th><th>Disciplina</th><th>Local</th></tr></thead><tbody><tr class="time-section"><td colspan="100%">Manhã</td></tr><tr><td>08:00 - 08:50</td><td>12000040 - M1 - BIOQUÍMICA I</td><td>Não informado</td></tr><tr><td>08:50 - 09:40</td><td>12000040 - M1 - BIOQUÍMICA I</td><td>Não informado</td></tr><tr class="time-section"><td colspan="100%">Tarde</td></tr><tr><td>13:30 - 14:20</td><td>09040021 - M1 - ANATOMIA HUMANA I</td><td>Não informado</td></tr><tr><td>14:20 - 15:10</td><td>09020017 - M1 - FISIOLOGIA I</td><td>Não informado</td></tr><tr><td>15:10 - 16:00</td><td>09020017 - M1 - FISIOLOGIA I</td><td>Não informado</td></tr></tbody></table><div class="day-header">4-QUARTA-FEIRA</div><table><thead><tr><th>Hora</th><th>Disciplina</th><th>Local</th></tr></thead><tbody><tr class="time-section"><td colspan="100%">Manhã</td></tr><tr><td>08:00 - 08:50</td><td>09040022 - M1 - HISTOLOGIA I</td><td>Não informado</td></tr><tr><td>08:50 - 09:40</td><td>09040022 - M1 - HISTOLOGIA I</td><td>Não informado</td></tr><tr><td>10:00 - 10:50</td><td>09040022 - M1 - HISTOLOGIA I</td><td>Não informado</td></tr><tr><td>10:50 - 11:40</td><td>09040022 - M1 - HISTOLOGIA I</td><td>Não informado</td></tr><tr class="time-section"><td colspan="100%">Tarde</td></tr><tr><td>17:10 - 18:00</td><td>07410002 - M1 - PSICOLOGIA MÉDICA I</td><td>Não informado</td></tr></tbody></table><div class="day-header">5-QUINTA-FEIRA</div><table><thead><tr><th>Hora</th><th>Disciplina</th><th>Local</th></tr></thead><tbody><tr class="time-section"><td colspan="100%">Manhã</td></tr><tr><td>08:00 - 08:50</td><td>07450006 - M1 - INTRODUÇÃO À MEDICINA</td><td>Não informado</td></tr><tr><td>08:50 - 09:40</td><td>07450006 - M1 - INTRODUÇÃO À MEDICINA</td><td>Não informado</td></tr><tr><td>10:00 - 10:50</td><td>07450006 - M1 - INTRODUÇÃO À MEDICINA</td><td>Não informado</td></tr><tr><td>10:50 - 11:40</td><td>07450006 - M1 - INTRODUÇÃO À MEDICINA</td><td>Não informado</td></tr><tr class="time-section"><td colspan="100%">Tarde</td></tr><tr><td>13:30 - 14:20</td><td>09040021 - M1 - ANATOMIA HUMANA I</td><td>Não informado</td></tr><tr><td>14:20 - 15:10</td><td>09040021 - M1 - ANATOMIA HUMANA I</td><td>Não informado</td></tr><tr><td>15:10 - 16:00</td><td>09040021 - M1 - ANATOMIA HUMANA I</td><td>Não informado</td></tr></tbody></table><div class="day-header">6-SEXTA-FEIRA</div><table><thead><tr><th>Hora</th><th>Disciplina</th><th>Local</th></tr></thead><tbody><tr class="time-section"><td colspan="100%">Manhã</td></tr><tr><td>08:00 - 08:50</td><td>12000040 - M1 - BIOQUÍMICA I</td><td>Não informado</td></tr><tr><td>08:50 - 09:40</td><td>12000040 - M1 - BIOQUÍMICA I</td><td>Não informado</td></tr><tr><td>10:00 - 10:50</td><td>12000040 - M1 - BIOQUÍMICA I</td><td>Não informado</td></tr><tr><td>10:50 - 11:40</td><td>07450006 - M1 - INTRODUÇÃO À MEDICINA</td><td>Não informado</td></tr></tbody></table></div>
+
+	<script>
+		document.addEventListener("DOMContentLoaded", function() {
+			const daysOfWeek = ["DOMINGO", "SEGUNDA", "TERÇA", "QUARTA", "QUINTA", "SEXTA", "SÁBADO"];
+			const now = new Date();
+			const currentDay = daysOfWeek[now.getDay()]; // Get the current day name
+			const currentTime = now.getHours() * 60 + now.getMinutes(); // Convert current time to minutes
+			
+			const scheduleDiv = document.getElementById("schedule");
+			const dayHeaders = scheduleDiv.getElementsByClassName("day-header");
+
+			let foundCurrentDay = false;
+			let nextEventFound = false;
+
+			for (let i = 0; i < dayHeaders.length; i++) {
+				const dayHeader = dayHeaders[i];
+				const dayName = dayHeader.textContent.split("-")[1].trim(); // Extract the day name
+				
+				if (dayName === currentDay) {
+					foundCurrentDay = true;
+					const table = dayHeader.nextElementSibling;
+					const rows = Array.from(table.getElementsByTagName("tbody")[0].getElementsByTagName("tr")).filter(row => !row.classList.contains("time-section"));
+
+					for (let j = 0; j < rows.length; j++) {
+						const row = rows[j];
+						const timeCell = row.getElementsByTagName("td")[0];
+						const timeRange = timeCell.textContent.trim().split(" - ");
+						const startTime = convertTimeToMinutes(timeRange[0]);
+						const endTime = convertTimeToMinutes(timeRange[1]);
+
+						if (currentTime > endTime) {
+							row.classList.add("past-event"); // Mark past events
+						} else if (currentTime >= startTime && currentTime <= endTime) {
+							row.classList.add("next-event"); // Mark current event
+							nextEventFound = true;
+						} else if (!nextEventFound) {
+							row.classList.add("next-event"); // Mark the next upcoming event
+							nextEventFound = true;
+						}
+					}
+				} else if (foundCurrentDay) {
+					break; // Stop after processing the current day
+				}
+			}
+		});
+
+		function convertTimeToMinutes(time) {
+			const [hours, minutes] = time.split(":").map(Number);
+			return hours * 60 + minutes;
+		}
+	</script>
 </body>
 </html>
